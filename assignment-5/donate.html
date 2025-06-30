@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate Bangladesh</title>
+  <link rel="stylesheet" href="/assignment-5/donate.css">
+</head>
+<body>
+  <header>
+    <button class="nav-btn" onclick="goToBlog()">Blog</button>
+    <div class="logo">📥 Donate Bangladesh</div>
+    <div class="balance" id="balanceDisplay">100000 BDT</div>
+  </header>
+
+  <div class="tabs">
+    <button id="donateTab" class="active" onclick="showTab('donate')">Donation</button>
+    <button id="historyTab" onclick="showTab('history')">History</button>
+  </div>
+
+  <div class="content">
+    <div id="donateContent">
+      <div class="donation-box">
+        <p>Cause: Flood Relief in Feni, Bangladesh</p>
+        <input type="number" id="donationAmount" placeholder="Enter amount" min="1">
+        <button onclick="makeDonation('Flood Relief in Feni, Bangladesh')">Donate Now</button>
+      </div>
+    </div>
+    <div id="historyContent" style="display:none"></div>
+  </div>
+
+  <div class="modal" id="confirmationModal">
+    <div class="modal-content">
+      <h2>Congrats! 🎉</h2>
+      <p>You have donated for humankind <strong>successfully</strong>.</p>
+      <button onclick="closeModal()">Close confirmation</button>
+    </div>
+  </div>
+
+  <script src="/assignment-5/donate.js"></script>
+</body>
+</html>
