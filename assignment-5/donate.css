@@ -1,15 +1,34 @@
     body {
       font-family: sans-serif;
       margin: 0;
-      background: #f8f8f8;
+      background: #FFF;
+    }
+    h2 {
+        color: #111;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 30px;
+    }
+    p{
+        color: rgba(17, 17, 17, 0.70);
+        font-family: Lexend;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 26px;
+    }
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
     }
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem;
-      background: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background: #F9F7F3;
     }
     header .logo {
       font-weight: bold;
@@ -29,6 +48,14 @@
       border: none;
       cursor: pointer;
     }
+    .modal-button{
+        background: #F2F2F2;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+    }
     .tabs {
       display: flex;
       justify-content: center;
@@ -46,15 +73,38 @@
       background: #8fdd32;
       color: #000;
     }
-    .content {
-      padding: 1rem;
-    }
-    .donation-box {
-      background: white;
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    input[type="text"], input[type="number"] {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
       margin-bottom: 1rem;
+      height: 20px;
+    }
+    .content {
+      padding: 32px;
+      border-radius: 16px;
+      border: 1px solid rgba(17, 17, 17, 0.10);
+      background: #FFF;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+    .donate-content {
+      display: flex;
+      gap: 1rem;
+    }
+    .donation-form{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+   .donate-btn {
+      padding: 16px 32px;
+      border-radius: 6px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      background: #B4F461;
     }
     .modal {
       position: fixed;

@@ -1,42 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donate Bangladesh</title>
-  <link rel="stylesheet" href="/assignment-5/donate.css">
-</head>
-<body>
-  <header>
-    <button class="nav-btn" onclick="goToBlog()">Blog</button>
-    <div class="logo">📥 Donate Bangladesh</div>
-    <div class="balance" id="balanceDisplay">100000 BDT</div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate Bangladesh</title>
+    <link rel="stylesheet" href="/assignment-5/donate.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <button class="nav-btn" onclick="goToBlog()">Blog</button>
+        <div class="logo">📥 Donate Bangladesh</div>
+        <div class="balance" id="balanceDisplay">100000 BDT</div>
+      </header>
 
-  <div class="tabs">
-    <button id="donateTab" class="active" onclick="showTab('donate')">Donation</button>
-    <button id="historyTab" onclick="showTab('history')">History</button>
-  </div>
+      <div class="tabs">
+        <button id="donateTab" class="active" onclick="showTab('donate')">
+          Donation
+        </button>
+        <button id="historyTab" onclick="showTab('history')">History</button>
+      </div>
 
-  <div class="content">
-    <div id="donateContent">
-      <div class="donation-box">
-        <p>Cause: Flood Relief in Feni, Bangladesh</p>
-        <input type="number" id="donationAmount" placeholder="Enter amount" min="1">
-        <button onclick="makeDonation('Flood Relief in Feni, Bangladesh')">Donate Now</button>
+      <div class="content">
+        <div class="donate-content" id="donateContent">
+          <img src="/assignment-5/assets/feni.png" alt="">
+          <div class="donation-box">
+            <h2>Donate for Flood at Noakhali, Bangladesh</h2>
+            <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+           <div class="donation-form">
+            <input
+              type="number"
+              id="donationAmount"
+              placeholder="Enter amount"
+              min="1"
+            />
+            <button class="donate-btn" onclick="makeDonation('Flood Relief in Feni, Bangladesh')">
+              Donate Now
+            </button>
+           </div>
+          </div>
+        </div>
+        <div id="historyContent" style="display: none"></div>
+      </div>
+
+      <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+          <h2>Congrats! 🎉</h2>
+          <p>You have donated for humankind <strong>successfully</strong>.</p>
+          <button class="modal-button" onclick="closeModal()">Close confirmation</button>
+        </div>
       </div>
     </div>
-    <div id="historyContent" style="display:none"></div>
-  </div>
-
-  <div class="modal" id="confirmationModal">
-    <div class="modal-content">
-      <h2>Congrats! 🎉</h2>
-      <p>You have donated for humankind <strong>successfully</strong>.</p>
-      <button onclick="closeModal()">Close confirmation</button>
-    </div>
-  </div>
-
-  <script src="/assignment-5/donate.js"></script>
-</body>
+    <script src="/assignment-5/donate.js"></script>
+  </body>
 </html>
